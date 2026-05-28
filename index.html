@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/avatars/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/avatars/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/avatars/favicon-32x32.png">
+    <link rel="icon" href="avatars/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="avatars/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="avatars/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Nodiux | Bluesky Network Analysis & Social Listening Tool</title>
@@ -16,7 +16,7 @@
 
     <meta property="og:title" content="Nodiux - Unlock Bluesky Intelligence">
     <meta property="og:description" content="Map conversations, spot key influencers, and visualize communities on Bluesky with one click.">
-    <meta property="og:image" content="{{ url_for('static', filename='image11.jpg') }}">
+    <meta property="og:image" content="static/image11.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nodiux.net">
 
@@ -37,11 +37,11 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link rel="stylesheet" href="static/css/landing.css">
 </head>
 
 <body>
@@ -49,13 +49,14 @@
     <header class="hero-section">
         <div class="container grid-hero">
             <div class="hero-text">
-                <a href="{{ url_for('home') }}" class="brand-name" style="text-decoration: none;">NODIUX</a>
+                <a href="index.html" class="brand-name" style="text-decoration: none;">NODIUX</a>
                 <h1>Mapping the social graph</h1>
                 <p class="subtitle">Discover hidden patterns in Bluesky conversations, identify most influential users and most discussed topics. Designed for researchers, powerful for marketers</p>
-                <a href="/auth-login" class="btn-primary">Start analyzing now</a>
+                <!-- ATTENZIONE: Inserisci l'URL reale della tua app Flask per il login se esterna a GitHub -->
+                <a href="https://tuo-server-reale.com" class="btn-primary">Start analyzing now</a>
             </div>
             <div class="hero-image-container">
-                <img src="{{ url_for('static', filename='image11.jpg') }}" alt="Nodiux Dashboard Preview" class="hero-img">
+                <img src="static/image11.jpg" alt="Nodiux Dashboard Preview" class="hero-img">
             </div>
         </div>
     </header>
@@ -80,24 +81,24 @@
         </div>
     </section>
 
-<section class="unlock-section">
+    <section class="unlock-section">
         <div class="container">
             <div class="unlock-content">
                 <h2>Why visualize networks?</h2>
                 <p>Networks reveal the hidden patterns behind digital interactions. Nodiux brings the power of <strong>Social Network Analysis</strong> to your fingertips, offering a fast, visual, and intuitive way to map relationships, detect communities, and uncover influence dynamics across social platforms.</p>
             </div>
         </div>
-</section>
+    </section>
 
-<section class="feature-section">
+    <section class="feature-section">
         <div class="container grid-2">
             <div class="feature-text">
                 <h1>Influencer & community mapping</h1>
                 <p>Identify who is really leading the conversation. Our <strong>Mentions Network</strong> visualizes interactions to help you find opinion leaders, organic communities, and active hubs that simple metrics miss.</p>
-                <a href="{{ url_for('tutorial') }}" class="btn-primary">Learn more</a>
+                <a href="tutorial.html" class="btn-primary">Learn more</a>
             </div>
             <div class="feature-image">
-                <img src="{{ url_for('static', filename='image02.jpg') }}" alt="Bluesky Influencer and Mentions Network Graph">
+                <img src="static/image02.jpg" alt="Bluesky Influencer and Mentions Network Graph">
             </div>
         </div>
     </section>
@@ -105,12 +106,12 @@
     <section class="feature-section">
         <div class="container grid-2 reverse-layout">
             <div class="feature-image">
-                <img src="{{ url_for('static', filename='hashtags_network_AI_landing.jpg') }}" alt="Hashtag Co-occurrence and Trend Map">
+                <img src="static/hashtags_network_AI_landing.jpg" alt="Hashtag Co-occurrence and Trend Map">
             </div>
             <div class="feature-text">
                 <h1>Trend and topic intelligence</h1>
                 <p>Understand how topics connect. The <strong>Hashtags Network</strong> maps co-occurrences to detect emerging trends, campaign resonance, and thematic clusters within the discourse.</p>
-                <a href="{{ url_for('tutorial_trend_topic') }}" class="btn-primary">Learn more</a>
+                <a href="tutorial_trend_topic.html" class="btn-primary">Learn more</a>
             </div>
         </div>
     </section>
@@ -120,10 +121,10 @@
             <div class="feature-text">
                 <h1>User ego networks</h1>
                 <p>Deep dive into specific profiles. Unveil the relational graph surrounding any user to discover how their personal interactions shape their influence and network position.</p>
-                <a href="{{ url_for('tutorial_user_ego') }}" class="btn-primary">Learn more</a>
+                <a href="tutorial_user_ego.html" class="btn-primary">Learn more</a>
             </div>
             <div class="feature-image">
-                <img src="{{ url_for('static', filename='image10.jpg') }}" alt="User Ego Network Visualization">
+                <img src="static/image10.jpg" alt="User Ego Network Visualization">
             </div>
         </div>
     </section>
@@ -143,26 +144,20 @@
                 <p class="copyright">Nodiux. Mapping the social graph. Since 2025.</p>
             </div>
             <div class="footer-center">
-                <a href="{{ url_for('faq') }}">FAQ</a>
-                <a href="{{ url_for('privacy_policy') }}">Privacy policy</a>
-                <a href="{{ url_for('terms_of_service') }}">Terms of service</a>
+                <a href="faq.html">FAQ</a>
+                <a href="privacy_policy.html">Privacy policy</a>
+                <a href="terms_of_service.html">Terms of service</a>
             </div>
             <div class="footer-right social-icons">
-                <a href="https://bsky.app/profile/nodiux.bsky.social" target="_blank" aria-label="Bluesky">
+                <a href="https://bsky.app" target="_blank" aria-label="Bluesky">
                     <svg class="icon">
-                        <use xlink:href="{{ url_for('static', filename='icons.svg') }}#bluesky"></use>
+                        <use xlink:href="static/icons.svg#bluesky"></use>
                     </svg>
                 </a>
-                <a href="mailto:hello@nodiux.net" aria-label="Email">
-                    <svg class="icon">
-                        <use xlink:href="{{ url_for('static', filename='icons.svg') }}#email"></use>
-                    </svg>
-                </a>
-
+                <a href="mailto:hello@nodiux.net" aria-label="Email">📧</a>
             </div>
         </div>
     </footer>
 
 </body>
 </html>
-<!-- ALESSANDRO 28/12/2025 nuova pagina landing END -->
