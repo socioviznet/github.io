@@ -1,0 +1,168 @@
+<!-- ALESSANDRO 28/12/2025 nuova pagina landing BEGIN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/avatars/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/avatars/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/avatars/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nodiux | Bluesky Network Analysis & Social Listening Tool</title>
+
+    <meta name="description" content="Free web-based tool to analyze Bluesky conversations. Visualize social graphs, map influencers, track hashtags, and export datasets for Gephi. Ideal for researchers and marketers.">
+    <meta name="keywords" content="Bluesky analytics, social network analysis, graph visualization, influencer mapping, hashtag tracking, SNA tool, digital humanities, social listening">
+    <meta name="author" content="Nodiux Team">
+
+    <meta property="og:title" content="Nodiux - Unlock Bluesky Intelligence">
+    <meta property="og:description" content="Map conversations, spot key influencers, and visualize communities on Bluesky with one click.">
+    <meta property="og:image" content="{{ url_for('static', filename='image11.jpg') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nodiux.net">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Nodiux",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "A web-based tool for Social Network Analysis (SNA) and visual social listening on Bluesky.",
+      "featureList": "Network visualization, Gephi export, Influencer identification, Hashtag mapping"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+
+<body>
+
+    <header class="hero-section">
+        <div class="container grid-hero">
+            <div class="hero-text">
+                <a href="{{ url_for('home') }}" class="brand-name" style="text-decoration: none;">NODIUX</a>
+                <h1>Mapping the social graph</h1>
+                <p class="subtitle">Discover hidden patterns in Bluesky conversations, identify most influential users and most discussed topics. Designed for researchers, powerful for marketers</p>
+                <a href="/auth-login" class="btn-primary">Start analyzing now</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="{{ url_for('static', filename='image11.jpg') }}" alt="Nodiux Dashboard Preview" class="hero-img">
+            </div>
+        </div>
+    </header>
+
+    <section class="value-prop-section">
+        <div class="container grid-3">
+            <div class="prop-column">
+                <div class="purple-dash"></div>
+                <h3>Visual network mapping</h3>
+                <p>Don't just read posts, see the connections. Nodiux reveals the hidden patterns and structures behind digital interactions in seconds.</p>
+            </div>
+            <div class="prop-column">
+                <div class="purple-dash"></div>
+                <h3>For research and marketing</h3>
+                <p>Effortlessly turn online conversations into interactive network graphs. Map hashtag co-occurrences and reveal the hidden connections between users.</p>
+            </div>
+            <div class="prop-column">
+                <div class="purple-dash"></div>
+                <h3>Zero setup, instant results</h3>
+                <p>Search a keyword and visualize the graph immediately. Or upload your dataset and get instant visual insights.</p>
+            </div>
+        </div>
+    </section>
+
+<section class="unlock-section">
+        <div class="container">
+            <div class="unlock-content">
+                <h2>Why visualize networks?</h2>
+                <p>Networks reveal the hidden patterns behind digital interactions. Nodiux brings the power of <strong>Social Network Analysis</strong> to your fingertips, offering a fast, visual, and intuitive way to map relationships, detect communities, and uncover influence dynamics across social platforms.</p>
+            </div>
+        </div>
+</section>
+
+<section class="feature-section">
+        <div class="container grid-2">
+            <div class="feature-text">
+                <h1>Influencer & community mapping</h1>
+                <p>Identify who is really leading the conversation. Our <strong>Mentions Network</strong> visualizes interactions to help you find opinion leaders, organic communities, and active hubs that simple metrics miss.</p>
+                <a href="{{ url_for('tutorial') }}" class="btn-primary">Learn more</a>
+            </div>
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='image02.jpg') }}" alt="Bluesky Influencer and Mentions Network Graph">
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="container grid-2 reverse-layout">
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='hashtags_network_AI_landing.jpg') }}" alt="Hashtag Co-occurrence and Trend Map">
+            </div>
+            <div class="feature-text">
+                <h1>Trend and topic intelligence</h1>
+                <p>Understand how topics connect. The <strong>Hashtags Network</strong> maps co-occurrences to detect emerging trends, campaign resonance, and thematic clusters within the discourse.</p>
+                <a href="{{ url_for('tutorial_trend_topic') }}" class="btn-primary">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="container grid-2">
+            <div class="feature-text">
+                <h1>User ego networks</h1>
+                <p>Deep dive into specific profiles. Unveil the relational graph surrounding any user to discover how their personal interactions shape their influence and network position.</p>
+                <a href="{{ url_for('tutorial_user_ego') }}" class="btn-primary">Learn more</a>
+            </div>
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='image10.jpg') }}" alt="User Ego Network Visualization">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Nodiux</h2>
+                <p>Born from a passion for Computational Social Science, Nodiux is designed to democratize network science. We empower researchers, marketers, and journalists to explore the complex structures of decentralized social media without technical barriers.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="copyright">Nodiux. Mapping the social graph. Since 2025.</p>
+            </div>
+            <div class="footer-center">
+                <a href="{{ url_for('faq') }}">FAQ</a>
+                <a href="{{ url_for('privacy_policy') }}">Privacy policy</a>
+                <a href="{{ url_for('terms_of_service') }}">Terms of service</a>
+            </div>
+            <div class="footer-right social-icons">
+                <a href="https://bsky.app/profile/nodiux.bsky.social" target="_blank" aria-label="Bluesky">
+                    <svg class="icon">
+                        <use xlink:href="{{ url_for('static', filename='icons.svg') }}#bluesky"></use>
+                    </svg>
+                </a>
+                <a href="mailto:hello@nodiux.net" aria-label="Email">
+                    <svg class="icon">
+                        <use xlink:href="{{ url_for('static', filename='icons.svg') }}#email"></use>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- ALESSANDRO 28/12/2025 nuova pagina landing END -->
