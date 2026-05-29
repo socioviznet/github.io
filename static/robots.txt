@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Disallow: /dashboard
+Disallow: /adminstats
+Disallow: /search
+Disallow: /download
+Disallow: /auth-login
+Disallow: /auth-register
+
+Sitemap: https://nodiux.net/sitemap.xml

@@ -1,0 +1,643 @@
+/* --- RESET --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background-color: #F7F7F7; /* Colore di riserva */
+    background-image: url('../bg.svg'); /* Carica bg.svg dalla cartella static */
+    background-size: cover; /* Copre tutto lo schermo */
+    background-attachment: fixed; /* L'immagine sta ferma mentre scrolli */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #242424;
+    line-height: 1.6;
+    font-weight: 300; /* Testo leggero di base */
+    font-size: 18px;
+}
+
+/* --- UTILITIES --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+
+/* --- HERO SECTION --- */
+.hero-section {
+    padding: 6rem 0 4rem 0;
+    background-image: url('../container17.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* LOGO - Alleggerito */
+.brand-name {
+    display: block;
+    color: #7E64ED;
+    font-weight: 800; /* Non più ultra-bold, ma semi-bold */
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+/* TITOLO - Alleggerito */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 400; /* Regular, non Bold */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: #242424;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(36,36,36,0.7);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #7E64ED;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: background 0.3s;
+}
+.btn-primary:hover { background-color: #6A4BE3; }
+
+/* --- 3 COLONNE (Value Prop) --- */
+.value-prop-section {
+    padding: 4rem 0 6rem 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.purple-dash {
+    width: 30px;
+    height: 2px;
+    background-color: #7E64ED;
+    margin-bottom: 1.5rem;
+}
+
+.prop-column h3 {
+    font-size: 1.3rem;
+    font-weight: 400; /* Titoli colonne leggeri */
+    margin-bottom: 1rem;
+}
+
+.prop-column p {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* --- FEATURE SECTIONS --- */
+.feature-section { padding: 5rem 0; }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.feature-text h3 {
+    font-size: 2rem;
+    font-weight: 400; /* Titolo feature leggero */
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #7E64ED;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    padding: 6rem 0;
+
+    /* MODIFICA QUI: Da grigio (#F7F7F7) a Bianco (#FFFFFF) */
+    background-color: #FFFFFF;
+
+    /* Aggiungiamo i bordi sopra e sotto come nell'originale */
+    border-top: 1px solid #E9E9E9;
+    border-bottom: none;
+
+    margin-top: 4rem;
+}
+
+.about-content {
+    max-width: 800px;
+    /* Opzionale: centra il testo se lo vuoi come l'originale */
+    /* margin: 0 auto; */
+}
+
+.about-content h2 {
+    font-size: 2.2rem; /* Leggermente più grande come il design originale */
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: rgba(36,36,36,0.6); /* Grigio scuro leggero */
+    line-height: 1.8;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #fff;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* La linea è qui */
+    border-top: 1px solid #eee;
+
+    /* Spazio tra la linea e il testo (sopra) */
+    padding-top: 2rem;
+
+    /* Spazio tra il testo e la fine della pagina (sotto) - AGGIUNTO ORA */
+    padding-bottom: 4rem;
+}
+
+/* Parte Sinistra (Copyright) */
+.footer-left p {
+    margin: 0; /* Rimuove lo spazio extra che disallinea il testo */
+    line-height: 1.2; /* Mantiene il testo compatto */
+}
+
+/* Parte Centrale (Link) */
+.footer-center {
+    display: flex;
+    align-items: center; /* Centra i link tra loro */
+    gap: 20px; /* Spazio tra Privacy e Terms */
+}
+
+.footer-center a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1; /* Allinea otticamente il testo */
+}
+
+.footer-center a:hover {
+    color: #7E64ED;
+}
+
+/* Parte Destra (Icone) */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center; /* Assicura che le icone siano allineate al centro del loro box */
+}
+
+.social-icons a {
+    display: flex; /* Flex anche qui per centrare l'SVG nel link */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+.social-icons .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: rgba(36,36,36,0.6);
+    transition: fill 0.25s ease;
+    display: block; /* Rimuove comportamenti strani degli elementi inline */
+}
+
+.social-icons a:hover .icon {
+    fill: rgba(36,36,36,0.9);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* Su mobile rimettiamo un po' di margine per separare le righe */
+    .footer-left p {
+        margin-bottom: 0.5rem;
+    }
+}
+/* Aggiungilo alla fine o nella sezione FEATURE SECTIONS */
+.feature-text p {
+    margin-bottom: 2rem; /* Spinge giù il bottone */
+    font-size: 1.1rem;
+    color: rgba(36,36,36,0.7);
+    line-height: 1.6;
+}
+
+/* --- UNLOCK SECTION --- */
+.unlock-section {
+    padding: 6rem 0;
+    text-align: center;
+    /* Assicuriamoci che lo sfondo sia trasparente per far vedere bg.svg sotto */
+    background-color: transparent;
+}
+
+.unlock-content {
+    max-width: 1000px; /* Stringe il testo per non farlo diventare lunghissimo */
+    margin: 0 auto;   /* Lo centra orizzontalmente */
+}
+
+.unlock-section h2 {
+    font-size: 2.5rem;
+    font-weight: 400; /* Light/Regular come il resto */
+    margin-bottom: 1.5rem;
+    color: #242424;
+    letter-spacing: -0.02em;
+}
+
+.unlock-section p {
+    font-size: 1.2rem;
+    color: rgba(36,36,36,0.7);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* --- PAGINE LEGALI (Privacy & Terms) --- */
+.legal-section {
+    padding: 6rem 0 2rem 0;
+    min-height: 60vh; /* Assicura che il footer non salga troppo se c'è poco testo */
+}
+
+.legal-content {
+    max-width: 800px; /* Larghezza ottimale per la lettura */
+    margin: 0 auto;
+    text-align: left; /* Il testo legale si legge meglio allineato a sinistra */
+}
+
+.legal-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #242424;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #242424;
+}
+
+.legal-content p {
+    margin-bottom: 1rem;
+    color: rgba(36,36,36,0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Nuova regola specifica per le liste puntate */
+.legal-content ul {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem; /* Riduce il rientro a sinistra per allinearli meglio */
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem; /* Spazio tra un punto e l'altro */
+    color: rgba(36,36,36,0.8); /* Stesso colore dei paragrafi */
+    font-size: 1rem;           /* Stessa dimensione dei paragrafi */
+    line-height: 1.6;          /* Stessa interlinea */
+    list-style-type: disc;     /* Assicura il pallino classico */
+}
+
+/* --- STILE PER LE IMMAGINI DEL TUTORIAL --- */
+.tutorial-img {
+    width: 100%;       /* Occupa tutta la larghezza del testo */
+    height: auto;      /* Mantiene le proporzioni */
+    border-radius: 8px; /* Angoli arrotondati eleganti */
+    margin: 2rem 0;    /* Spazio sopra e sotto l'immagine */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Leggera ombra per staccare dal fondo */
+    border: 1px solid #eee;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Aggiungere alla fine)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* --- 1. TITOLI E TESTI (Landing Page) --- */
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .hero-content p.subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    /* Centra i titoli generali (verrà sovrascritto specificamente per .legal-content se serve, ma di base li vogliamo centrati) */
+    h1, h2, h3, h4, h5 {
+        font-size: 1.8rem !important;
+        text-align: center !important;
+        width: 100%;
+    }
+
+    /* Regola base per la landing: paragrafi centrati */
+    p {
+        text-align: center;
+    }
+
+    /* --- 2. LAYOUT A COLONNA UNICA (Hero + Features) --- */
+    .grid-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .reverse-layout {
+        flex-direction: column-reverse;
+    }
+
+    /* --- 3. IMMAGINI --- */
+    .hero-image img,
+    .feature-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 1.5rem auto 0 auto;
+    }
+
+    /* --- 4. TRE COLONNE (Value Proposition) --- */
+    .grid-3 {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .value-prop-column {
+        width: 100%;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    /* --- 5. SPAZIATURA SEZIONI --- */
+    .hero-section, .feature-section, .value-prop-section, .about-section, .legal-section {
+        padding: 3rem 0;
+    }
+
+    .hero-section {
+        padding-top: 5rem;
+    }
+
+    /* --- 6. TUTTI I BOTTONI --- */
+    .btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    /* --- 7. FOOTER --- */
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* --- FIX SPECIFICO PER HERO SECTION --- */
+    .hero-section .container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        height: auto !important;
+    }
+
+    .hero-image,
+    .hero-section img {
+        width: 100%;
+        max-width: 350px;
+        margin: 2rem auto 0 auto;
+        display: block;
+        position: static !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        text-align: center;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* --- CENTRATURA CONTENITORI LANDING PAGE --- */
+    /* NOTA: Ho rimosso .legal-content da qui per non forzarlo al centro */
+    .feature-text,
+    .about-content {
+        text-align: center !important;
+        align-items: center !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- CENTRATURA LOGO NODIUX --- */
+    .brand-name {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- 8. FIX SPECIFICO PER PAGINE CONTENUTO (FAQ, Privacy, Terms, Tutorial) --- */
+    /* Questa sezione gestisce solo le pagine interne, sovrascrivendo le regole precedenti */
+
+    .legal-content {
+        display: block !important;   /* Rimuove flex che centra */
+        text-align: left !important; /* Allinea a sinistra */
+        padding: 0 16px;             /* Margine laterale */
+    }
+
+    /* Forza i paragrafi a sinistra SOLO dentro queste pagine */
+    .legal-content p {
+        text-align: left !important;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Liste puntate (Privacy/Terms) allineate a sinistra */
+    .legal-content ul,
+    .legal-content ol {
+        text-align: left !important;
+        padding-left: 20px;
+    }
+
+    .legal-content li {
+        text-align: left !important;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Titoli interni (H2, H3) rimangono centrati per estetica */
+    .legal-content h1,
+    .legal-content h2,
+    .legal-content h3 {
+        text-align: center !important;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    /* Gestione Immagini nel Tutorial (centrate) */
+    .legal-content img,
+    .tutorial-img {
+        display: block;
+        margin: 2rem auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Gestione Box Citazione nelle FAQ (sfondo grigio) */
+    .legal-content div[style*="background-color"] {
+        text-align: left !important;
+    }
+}
+/* =========================================
+   AUTH / LOGIN SECTION
+   ========================================= */
+
+/* Sfondo generale della pagina di login */
+.auth-page-wrapper {
+    min-height: 80vh; /* Occupa buona parte dello schermo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra orizzontalmente */
+    padding: 2rem 1rem;
+    background-color: #FAFAFA; /* Grigio chiarissimo per staccare dal bianco della card */
+}
+
+/* La Card bianca centrale */
+.auth-card {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); /* Ombra morbida ed elegante */
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.auth-card h2 {
+    margin-bottom: 2rem;
+    color: #242424;
+    font-size: 1.5rem;
+}
+
+/* Stile degli Input (Email/Password) */
+.auth-input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 1rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    box-sizing: border-box; /* Importante per i padding */
+    font-family: 'Inter', sans-serif;
+}
+
+.auth-input:focus {
+    border-color: #7E64ED; /* Viola Nodiux al focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(126, 100, 237, 0.1);
+}
+
+/* Bottone Secondario (Register) - Bordo Viola, sfondo trasparente */
+.btn-outline {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: transparent;
+    color: #7E64ED;
+    border: 2px solid #7E64ED; /* Bordo un po' spesso */
+    border-radius: 50px; /* Arrotondato come il primary */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-sizing: border-box;
+}
+
+.btn-outline:hover {
+    background-color: rgba(126, 100, 237, 0.1); /* Sfondo leggermente più visibile */
+    transform: none;       /* RIMOSSO: Nessuno spostamento verticale */
+    box-shadow: none;      /* RIMOSSO: Nessuna ombra che simula il movimento */
+    text-decoration: none; /* Sicurezza: niente sottolineature */
+}
+
+/* Link "Forgot Password" */
+.auth-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #888;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.auth-link:hover {
+    color: #7E64ED;
+    text-decoration: underline;
+}
+
+/* Messaggi di errore/successo */
+#message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 1.5rem;
+}
+#message.error { color: #D32F2F; }
+#message.success { color: #2E7D32; }
