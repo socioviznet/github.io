@@ -5,7 +5,7 @@ body {
     font-family: 'Inter', sans-serif;
 
     background-color: #F7F7F7; /* Colore di riserva */
-    background-image: url('static/bg.svg'); /* Carica bg.jpg dalla cartella static */
+    background-image: url('../static/bg.svg'); /* Carica bg.svg dalla cartella static */
     background-size: cover; /* Copre tutto lo schermo */
     background-attachment: fixed; /* L'immagine sta ferma mentre scrolli */
     background-position: center;
